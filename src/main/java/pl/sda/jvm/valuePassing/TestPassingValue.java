@@ -8,13 +8,21 @@ public class TestPassingValue {
         System.out.println(user);
         testPassingVal1(user);
         System.out.println(user);
-
+        testPassingVal2(user);
+        System.out.println(user);
 
     }
 
     private static void testPassingVal1(User user){
         user.setName("Changed");
     }
+
+    private static void testPassingVal2(User user){
+        user = new User();
+        user.setName("Jonny");
+
+    }
+
 
 
     private static class User{
