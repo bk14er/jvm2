@@ -6,15 +6,16 @@ package pl.sda.jvm.jmh.strategy;
 public class MergeSort {
 
 
-    private int[] array;
-    private int[] tempMergArr;
+    private Integer[] array;
+    private Integer[] tempMergArr;
     private int length;
 
-    public void sort(int inputArr[]) {
+    public Integer[] sort(Integer[] inputArr) {
         this.array = inputArr;
         this.length = inputArr.length;
-        this.tempMergArr = new int[length];
+        this.tempMergArr = new Integer[length];
         doMergeSort(0, length - 1);
+        return array;
     }
 
     private void doMergeSort(int lowerIndex, int higherIndex) {

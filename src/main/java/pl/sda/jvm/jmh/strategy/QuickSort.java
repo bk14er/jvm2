@@ -5,10 +5,10 @@ package pl.sda.jvm.jmh.strategy;
  */
 public class QuickSort {
 
-    private int array[];
+    private Integer[] array;
     private int length;
 
-    public void sort(int[] inputArr) {
+    public void sort(Integer[] inputArr) {
 
         if (inputArr == null || inputArr.length == 0) {
             return;
