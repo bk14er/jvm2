@@ -81,6 +81,7 @@ public class CollectionBenchmarkTest {
         for(int i = 0 ; i < array.length; i++){
             blackhole.consume(i);
         }
+
     }
 
 }
