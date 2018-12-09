@@ -8,14 +8,15 @@ public class QuickSort {
     private Integer[] array;
     private int length;
 
-    public void sort(Integer[] inputArr) {
+    public Integer[] sort(Integer[] inputArr) {
 
         if (inputArr == null || inputArr.length == 0) {
-            return;
+            return null;
         }
         this.array = inputArr;
         length = inputArr.length;
         quickSort(0, length - 1);
+        return array;
     }
 
     private void quickSort(int lowerIndex, int higherIndex) {
