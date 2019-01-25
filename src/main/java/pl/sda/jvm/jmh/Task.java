@@ -1,7 +1,7 @@
 package pl.sda.jvm.jmh;
 
 /*
- * Napisz benchmark porównujący sortowanie MergeSort i QuickSort (Użyj już istniejących klas)
+ * Napisz benchmark porównujący sortowanie MergeSortIterative i QuickSortIterative (Użyj już istniejących klas)
  *
  * Np. dla tablicy : int[] input = {57,51,2,41,43,21,5,9,11,6,15};
  *

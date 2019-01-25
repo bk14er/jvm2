@@ -3,7 +3,7 @@ package pl.sda.jvm.jmh.strategy;
 /**
  * From http://www.java2novice.com/java-sorting-algorithms/merge-sort/
  */
-public class MergeSort {
+public class MergeSortIterative {
 
 
     private Integer[] array;

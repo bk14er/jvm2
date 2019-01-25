@@ -3,8 +3,8 @@ package pl.sda.jvm.jmh;
 import org.openjdk.jmh.Main;
 import org.openjdk.jmh.annotations.*;
 import org.openjdk.jmh.infra.Blackhole;
-import pl.sda.jvm.jmh.strategy.MergeSort;
-import pl.sda.jvm.jmh.strategy.QuickSort;
+import pl.sda.jvm.jmh.strategy.MergeSortIterative;
+import pl.sda.jvm.jmh.strategy.QuickSortIterative;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 /*
- * Napisz benchmark porównujący sortowanie MergeSort i QuickSort (Użyj już istniejących klas)
+ * Napisz benchmark porównujący sortowanie MergeSortIterative i QuickSortIterative (Użyj już istniejących klas)
  *
  * Np. dla tablicy : int[] input = {57,51,2,41,43,21,5,9,11,6,15};
  *
@@ -30,8 +30,8 @@ public class TaskSolutions {
 
     private Integer[] elements;
 
-    private MergeSort mergeSort;
-    private QuickSort quickSort;
+    private MergeSortIterative mergeSortIterative;
+    private QuickSortIterative quickSortIterative;
 
     /**
      * Uruchomienie benchmarka
@@ -42,8 +42,8 @@ public class TaskSolutions {
 
     @Setup(value = Level.Trial)
     public void init() {
-        mergeSort = new MergeSort();
-        quickSort = new QuickSort();
+        mergeSortIterative = new MergeSortIterative();
+        quickSortIterative = new QuickSortIterative();
 
 
         List<Integer> temp = new ArrayList<>();
@@ -55,24 +55,24 @@ public class TaskSolutions {
     }
 
 
-    @Benchmark
-    @BenchmarkMode(value = Mode.AverageTime)
-    @OutputTimeUnit(TimeUnit.NANOSECONDS)
-    @Fork(1)
-    @Measurement(iterations = 10)
-    @Warmup(iterations = 10)
-    public void testMergeSort(Blackhole blackhole){
-        blackhole.consume(mergeSort.sort(elements));
-    }
+//    @Benchmark
+//    @BenchmarkMode(value = Mode.AverageTime)
+//    @OutputTimeUnit(TimeUnit.NANOSECONDS)
+//    @Fork(1)
+//    @Measurement(iterations = 10)
+//    @Warmup(iterations = 10)
+//    public void testMergeSort(Blackhole blackhole){
+//        blackhole.consume(mergeSortIterative.sort(elements));
+//    }
 
     @Benchmark
     @BenchmarkMode(value = Mode.AverageTime)
     @OutputTimeUnit(TimeUnit.NANOSECONDS)
     @Fork(1)
-    @Measurement(iterations = 10)
-    @Warmup(iterations = 10)
+    @Measurement(iterations = 5)
+    @Warmup(iterations = 5)
     public void testQuickSort(Blackhole blackhole){
-        blackhole.consume(quickSort.sort(elements));
+        blackhole.consume(quickSortIterative.sort(elements));
     }
 
 

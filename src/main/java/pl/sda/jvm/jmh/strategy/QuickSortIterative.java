@@ -3,7 +3,7 @@ package pl.sda.jvm.jmh.strategy;
 /**
  * http://www.java2novice.com/java-sorting-algorithms/quick-sort/
  */
-public class QuickSort {
+public class QuickSortIterative {
 
     private Integer[] array;
     private int length;

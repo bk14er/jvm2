@@ -4,6 +4,9 @@ import java.util.Arrays;
 import java.util.EmptyStackException;
 import java.util.Random;
 
+/**
+ * Odpalić z parameterem -Xmx10m
+ */
 public class Stack {
 
     private Object[] elements;
@@ -22,8 +25,6 @@ public class Stack {
     public Object pop() {
         if (size == 0)
             throw new EmptyStackException();
-
-        elements[size] = null;
 
         return elements[--size];
     }
@@ -44,10 +45,10 @@ public class Stack {
 
 
         while (true) {
-            stack.push("Hi" + new Random().nextInt());
+            stack.push("Cześć! człowieku numer " + new Random().nextInt() + ". Witaj na pokładzie lotu numer " + new Random().nextInt());
 
             try {
-                Thread.sleep(100);
+                Thread.sleep(10);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

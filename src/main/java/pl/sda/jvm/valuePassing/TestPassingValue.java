@@ -28,7 +28,6 @@ public class TestPassingValue {
     private static class User{
         private String name = "Jonh";
 
-
         public String getName() {
             return name;
         }

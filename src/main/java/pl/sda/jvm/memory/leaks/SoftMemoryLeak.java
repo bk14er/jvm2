@@ -5,7 +5,6 @@ package pl.sda.jvm.memory.leaks;
  * -Xms to startowy rozmiar sterty
  * JVisualVM
  *
- *
  * Soft leak - obiekt ma referencje na stosie, nawet jeśli nigdy go nie użyje
  */
 public class SoftMemoryLeak {
