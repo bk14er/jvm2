@@ -36,23 +36,23 @@ public class TaskSolutions {
     /**
      * Uruchomienie benchmarka
      */
-    public static void main(String[] args) throws Exception {
-        Main.main(args);
-    }
-
-    @Setup(value = Level.Trial)
-    public void init() {
-        mergeSortIterative = new MergeSortIterative();
-        quickSortIterative = new QuickSortIterative();
-
-
-        List<Integer> temp = new ArrayList<>();
-        Random random = new Random();
-        for (int i = 0; i < 100_000; i++) {
-            temp.add(random.nextInt());
-        }
-        elements = temp.toArray(new Integer[]{});
-    }
+//    public static void main(String[] args) throws Exception {
+//        Main.main(args);
+//    }
+//
+//    @Setup(value = Level.Trial)
+//    public void init() {
+//        mergeSortIterative = new MergeSortIterative();
+//        quickSortIterative = new QuickSortIterative();
+//
+//
+//        List<Integer> temp = new ArrayList<>();
+//        Random random = new Random();
+//        for (int i = 0; i < 100_000; i++) {
+//            temp.add(random.nextInt());
+//        }
+//        elements = temp.toArray(new Integer[]{});
+//    }
 
 
 //    @Benchmark
@@ -65,15 +65,15 @@ public class TaskSolutions {
 //        blackhole.consume(mergeSortIterative.sort(elements));
 //    }
 
-    @Benchmark
-    @BenchmarkMode(value = Mode.AverageTime)
-    @OutputTimeUnit(TimeUnit.NANOSECONDS)
-    @Fork(1)
-    @Measurement(iterations = 5)
-    @Warmup(iterations = 5)
-    public void testQuickSort(Blackhole blackhole){
-        blackhole.consume(quickSortIterative.sort(elements));
-    }
+//    @Benchmark
+//    @BenchmarkMode(value = Mode.AverageTime)
+//    @OutputTimeUnit(TimeUnit.NANOSECONDS)
+//    @Fork(1)
+//    @Measurement(iterations = 5)
+//    @Warmup(iterations = 5)
+//    public void testQuickSort(Blackhole blackhole){
+//        blackhole.consume(quickSortIterative.sort(elements));
+//    }
 
 
 }

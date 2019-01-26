@@ -6,8 +6,11 @@ public class TestPassingValue {
     public static void main(String args[]){
         User user = new User();
         System.out.println(user);
+
         testPassingVal1(user);
         System.out.println(user);
+
+
         testPassingVal2(user);
         System.out.println(user);
 
