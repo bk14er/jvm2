@@ -9,7 +9,7 @@ public class TaskManager {
     private List<Task> tasks = new ArrayList<>();
     private int nextId = 0;
 
-    public  void addTask(Task task) {
+    public void addTask(Task task) {
         synchronized (this) {
             task.setId(nextId);
             nextId++;
@@ -18,8 +18,12 @@ public class TaskManager {
 
     }
 
-    public synchronized Task getNextTask() {
-        return  tasks.get(0);
+    public  Task getNextTask() {
+        synchronized(this){
+            Task task = tasks.get(0);
+            tasks.remove(0);
+            return task;
+        }
     }
 
     public void howManyTask() {
@@ -28,7 +32,7 @@ public class TaskManager {
     }
 
     public void displayCustomers() {
-        synchronized(tasks){
+        synchronized (tasks) {
             for (Task c : tasks) {
                 System.out.println(c.toString());
                 try {
@@ -40,7 +44,6 @@ public class TaskManager {
             }
         }
     }
-
 
 
 }
