@@ -14,7 +14,14 @@ public class Runner {
 
         BookCollections bookCollections =new BookCollections(Arrays.asList(b1,b2));
 
+
+        bookCollections.getBooks().clear();
+
         bookCollections.printAllBooks();
+
+        bookCollections
+                .findBookByTitle("cos")
+                .orElseGet(()->new Book(0,"Ktos","dsf",p1));
 
     }
 

@@ -4,13 +4,13 @@ import java.util.Objects;
 
 public final class Book {
 
-    private long id;
+    private final long id;
 
-    private String author;
+    private final String author;
 
-    private String title;
+    private final String title;
 
-    private Price price;
+    private final Price price;
 
     public Book(long id, String author, String title, Price price) {
         this.id = id;

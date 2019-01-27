@@ -5,9 +5,9 @@ import java.util.Objects;
 
 public final class Price {
 
-    private BigDecimal value;
+    private final BigDecimal value;
 
-    private Currency currency;
+    private final Currency currency;
 
     public Price(BigDecimal value, Currency currency) {
         this.value = value;
