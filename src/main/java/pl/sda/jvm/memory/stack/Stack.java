@@ -5,7 +5,7 @@ import java.util.EmptyStackException;
 import java.util.Random;
 
 /**
- * Odpalić z parameterem -Xmx10m
+ * Odpalić z parameterem -Xmx16m
  */
 public class Stack {
 
